@@ -1,0 +1,7 @@
+(defvar eee-base-directory "/home/chris/eee/trunk")
+(load (concat eee-base-directory "eee-main"))
+
+
+
+
+

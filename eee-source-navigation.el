@@ -1,0 +1,15 @@
+(defun eee-source-navigation:find-current-tag ()
+  (interactive)
+  (let ( (current_tag (thing-at-point 'word))
+       )
+    (find-tag current_tag)
+    )
+)
+
+(defun eee-source-navigation:find-last-tag ()
+  (interactive)
+  (find-tag nil t)
+)
+
+(global-set-key [red ?f]     'eee-source-navigation:find-current-tag)
+(global-set-key [red red ?f] 'eee-source-navigation:find-last-tag)
