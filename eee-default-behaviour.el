@@ -38,7 +38,12 @@
 )
 (setq auto-mode-alist
       (cons '("\\.xsd$" . xml-mode) auto-mode-alist)
+      )
+(setq auto-mode-alist
+      (cons '("\\Dockerfile$" . dockerfile-mode) auto-mode-alist)
 )
+
+
 ;; Call various functions
 (auto-fill-mode 1)
 (global-font-lock-mode t)
