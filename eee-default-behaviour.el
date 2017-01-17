@@ -42,7 +42,9 @@
 (setq auto-mode-alist
       (cons '("\\Dockerfile$" . dockerfile-mode) auto-mode-alist)
 )
-
+(setq auto-mode-alist
+      (cons '("\\.env$" . shell-script-mode) auto-mode-alist)
+)
 
 ;; Call various functions
 (auto-fill-mode 1)
