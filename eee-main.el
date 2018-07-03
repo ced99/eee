@@ -4,7 +4,9 @@
 (load (concat eee-base-directory "add-ons/" "lua-mode"))
 (load (concat eee-base-directory "add-ons/" "toml-mode"))
 (load (concat eee-base-directory "add-ons/" "dockerfile-mode"))
-
+(load (concat eee-base-directory "add-ons/" "json-reformat"))
+(load (concat eee-base-directory "add-ons/" "json-snatcher"))
+(load (concat eee-base-directory "add-ons/" "json-mode"))
 
 (load (concat eee-base-directory "eee-default-behaviour"))
 (load (concat eee-base-directory "eee-keys"))
