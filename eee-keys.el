@@ -112,7 +112,7 @@
 ;;; Workaround, since in emacs 21.4 new frames ignore the default
 ;;; face settings. Damn !!!
     (interactive)
-    (new-frame)
+    (make-frame)
     (set-face-attribute 'default nil :height 94)
 )
 
@@ -144,7 +144,3 @@
   (local-set-key "'" 'eee-keys:insert-squotes)
 )
 (add-hook 'perl-mode-hook 'eee-keys:fix-perl-keymap)
-
-
-
-

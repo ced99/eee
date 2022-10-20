@@ -74,26 +74,6 @@
 (global-set-key [red ?c] 'eee-buffer:set-coding-system)
 (global-set-key [red ?#] 'comment-or-uncomment-region)
 
-(defun eee-buffer:remove-svn-keyords ()
-     (interactive)
-     (let ( (eee-template:current-pos (point)) )
-       (when (and vc-mode (string-match "GIT" vc-mode))
-         (progn
-           (beginning-of-buffer)
-           (while (re-search-forward "#.*$Id.*$" nil t)
-             (progn
-               (eee-text:kill-whole-line)
-               (eee-text:delete-superflous-empty-lines)
-               )
-             )
-           )
-         )
-       (and (goto-char eee-template:current-pos) nil)
-       )
-     )
-(add-hook 'write-file-hooks 'eee-buffer:remove-svn-keyords)
-
-
 (setq eee-buffer:sensitive-file-types '(".tfo" ".meta" ".bin"))
 
 (defun eee-buffer:delete-trailing-whitespace ()
